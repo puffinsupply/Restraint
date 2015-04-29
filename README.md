@@ -26,7 +26,7 @@ Restraint is a very very small library to help make your use of `NSLayoutConstra
 
 Let's set the height & width of an `imageView` to `200` points and center in the current `UIView`. Here's how we would do that with `NSLayoutConstraint`:
 
-```
+```swift
 let imageViewWidthConstraint = NSLayoutConstraint(
   item:       imageView,
   attribute:  .Height,
@@ -70,17 +70,15 @@ let imageViewVerticalConstraint = NSLayoutConstraint(
 )
 
 addConstraints([imageViewHorizontalConstraint, imageViewVerticalConstraint])
-
 ```
 
-# 😨
+### :fearful:
 
 And of course, this depends upon your particular formatting conventions. You know how quickly this gets out of hand.
 
 Here's how to apply these same constraints with `Restraint`:
 
-
-```
+```swift
 Restraint(imageView, .Width,  .Equal, 200).addToView(imageView)
 Restraint(imageView, .Height, .Equal, 200).addToView(imageView)
 
@@ -88,13 +86,15 @@ Restraint(imageView, .CenterX, .Equal, self, .CenterX).addToView(self)
 Restraint(imageView, .CenterY, .Equal, self, .CenterY).addToView(self)
 ```
 
+### :massage:
+
 ## Detailed Example
 
 ![Example View](Example.png)
 
 For this view, we'd like to:
 
-- Center the `imageView` (which is of a fixed size) vertically and horizontally in the containing view. 
+- Center the `imageView` (which is of a fixed size) vertically and horizontally in the containing view.
 - Center `topLabel` (which is of a variable size) vertically between the top of `imageView` and the top of the containing view.
 - Center `topLabel` horizontally in the containing view.
 - Center `bottomLabel` (which is of a variable size) vertically between the bottom of `imageView` and the bottom of the containing view.
@@ -102,7 +102,7 @@ For this view, we'd like to:
 
 Here are those rules expressed with `Restraint`:
 
-```
+```swift
 // Image View Constraints
 
 Restraint(imageView, .Width,  .Equal, imageViewSize).addToView(self)
@@ -133,7 +133,7 @@ Each `Restraint` simply creates the appropriate `NSLayoutConstraint`, and the ca
 
 Optionally, you can call `Restraint().constraint()` to get an instance of `NSLayoutConstraint` and add your constraint with `UIView#addConstraint` or `#addConstraints` later. For example:
 
-```
+```swift
 let heightConstraint = Restraint(imageView, .Height, .Equal, 200)
 
 imageView.addConstraint(heightConstraint)
@@ -147,8 +147,8 @@ In this case you'll need to handle disabling `translatesAutoresizingMaskIntoCons
 
 Add the following to your project's `Cartfile`:
 
-```
-    github "puffinsupply/Restraint" >= 0.0.1
+```swift
+github "puffinsupply/Restraint" >= 0.0.1
 ```
 
 ### Manual
@@ -158,7 +158,3 @@ Simply add [Restraint.swift](Restraint/Restraint.swift) to your project.
 ## License
 
 - [MIT](http://thi.mit-license.org/)
-
-# 💆
-
-
