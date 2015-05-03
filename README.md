@@ -134,7 +134,7 @@ Each `Restraint` simply creates the appropriate `NSLayoutConstraint`, and the ca
 Optionally, you can call `Restraint().constraint()` to get an instance of `NSLayoutConstraint` and add your constraint with `UIView#addConstraint` or `#addConstraints` later. For example:
 
 ```swift
-let heightConstraint = Restraint(imageView, .Height, .Equal, 200)
+let heightConstraint = Restraint(imageView, .Height, .Equal, 200).constraint()
 
 imageView.addConstraint(heightConstraint)
 ```
