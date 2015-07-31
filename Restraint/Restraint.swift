@@ -29,10 +29,10 @@ public struct Restraint {
   // MARK: Initializers
 
   public init(
-    _ leftView:       AnyObject,
+    _ leftView:       UIView,
     _ leftAttribute:  NSLayoutAttribute,
     _ relation:       NSLayoutRelation,
-    _ rightView:      AnyObject,
+    _ rightView:      UIView,
     _ rightAttribute: NSLayoutAttribute,
     _ multiplier:     CGFloat,
     _ constant:       CGFloat
@@ -47,10 +47,10 @@ public struct Restraint {
   }
 
   public init(
-    _ leftView:       AnyObject,
+    _ leftView:       UIView,
     _ leftAttribute:  NSLayoutAttribute,
     _ relation:       NSLayoutRelation,
-    _ rightView:      AnyObject,
+    _ rightView:      UIView,
     _ rightAttribute: NSLayoutAttribute
     ) {
       self.leftView       = leftView
@@ -63,7 +63,7 @@ public struct Restraint {
   }
 
   public init(
-    _ leftView:       AnyObject,
+    _ leftView:       UIView,
     _ leftAttribute:  NSLayoutAttribute,
     _ relation:       NSLayoutRelation,
     _ constant:       CGFloat
@@ -105,10 +105,10 @@ public struct Restraint {
 
   // MARK: Private
 
-  private let leftView:       AnyObject
+  private let leftView:       UIView
   private let leftAttribute:  NSLayoutAttribute
   private let relation:       NSLayoutRelation
-  private let rightView:      AnyObject?
+  private let rightView:      UIView?
   private let rightAttribute: NSLayoutAttribute
   private let multiplier:     CGFloat
   private let constant:       CGFloat
