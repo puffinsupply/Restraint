@@ -25,7 +25,7 @@ class View: UIView {
     addSubview(topLabel)
     addSubview(bottomLabel)
 
-    var imageViewSize = CGFloat(200)
+    let imageViewSize = CGFloat(200)
 
     // MARK: View Constraints
 
