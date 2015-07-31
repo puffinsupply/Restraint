@@ -94,9 +94,9 @@ public struct Restraint {
   public func addToView(view: UIView) -> NSLayoutConstraint {
     let constraint = self.constraint()
 
-    view.setTranslatesAutoresizingMaskIntoConstraints(false)
-    leftView.setTranslatesAutoresizingMaskIntoConstraints(false)
-    rightView?.setTranslatesAutoresizingMaskIntoConstraints(false)
+    view.translatesAutoresizingMaskIntoConstraints = false
+    leftView.translatesAutoresizingMaskIntoConstraints = false
+    rightView?.translatesAutoresizingMaskIntoConstraints = false
 
     view.addConstraint(constraint)
 
