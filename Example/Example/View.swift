@@ -29,8 +29,8 @@ class View: UIView {
 
     // MARK: View Constraints
 
-    Restraint(self, .Width,  .Equal, UIScreen.mainScreen().applicationFrame.width).addToView(self)
-    Restraint(self, .Height, .Equal, UIScreen.mainScreen().applicationFrame.height).addToView(self)
+    Restraint(self, .Width,  .Equal, UIScreen.mainScreen().bounds.width).addToView(self)
+    Restraint(self, .Height, .Equal, UIScreen.mainScreen().bounds.height).addToView(self)
 
     // MARK: Image View Constraints
 
