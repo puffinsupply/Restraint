@@ -1,6 +1,6 @@
 //  The MIT License (MIT)
 //
-//  Copyright (c) 2015 Adam Michela, The Puffin Supply Project
+//  Copyright (c) 2015 Adam Michela, The Puffin Supply Project, github.com/puffinsupply/Restraint
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
