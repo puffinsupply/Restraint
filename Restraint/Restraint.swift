@@ -1,6 +1,6 @@
 //  The MIT License (MIT)
 //
-//  Copyright (c) 2015 Adam Michela, The Puffin Supply Project
+//  Copyright (c) 2015 Adam Michela, The Puffin Supply Project, github.com/puffinsupply/Restraint
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -29,49 +29,49 @@ public struct Restraint {
   // MARK: Initializers
 
   public init(
-    _ leftView:       AnyObject,
+    _ leftItem:       AnyObject,
     _ leftAttribute:  NSLayoutAttribute,
     _ relation:       NSLayoutRelation,
-    _ rightView:      AnyObject,
+    _ rightItem:      AnyObject,
     _ rightAttribute: NSLayoutAttribute,
     _ multiplier:     CGFloat,
     _ constant:       CGFloat
     ) {
-      self.leftView       = leftView
+      self.leftItem       = leftItem
       self.leftAttribute  = leftAttribute
       self.relation       = relation
-      self.rightView      = rightView
+      self.rightItem      = rightItem
       self.rightAttribute = rightAttribute
       self.multiplier     = multiplier
       self.constant       = constant
   }
 
   public init(
-    _ leftView:       AnyObject,
+    _ leftItem:       AnyObject,
     _ leftAttribute:  NSLayoutAttribute,
     _ relation:       NSLayoutRelation,
-    _ rightView:      AnyObject,
+    _ rightItem:      AnyObject,
     _ rightAttribute: NSLayoutAttribute
     ) {
-      self.leftView       = leftView
+      self.leftItem       = leftItem
       self.leftAttribute  = leftAttribute
       self.relation       = relation
-      self.rightView      = rightView
+      self.rightItem      = rightItem
       self.rightAttribute = rightAttribute
       self.multiplier     = 1
       self.constant       = 0
   }
 
   public init(
-    _ leftView:       AnyObject,
+    _ leftItem:       AnyObject,
     _ leftAttribute:  NSLayoutAttribute,
     _ relation:       NSLayoutRelation,
     _ constant:       CGFloat
     ) {
-      self.leftView       = leftView
+      self.leftItem       = leftItem
       self.leftAttribute  = leftAttribute
       self.relation       = relation
-      self.rightView      = nil
+      self.rightItem      = nil
       self.rightAttribute = .NotAnAttribute
       self.multiplier     = 1
       self.constant       = constant
@@ -81,10 +81,10 @@ public struct Restraint {
 
   public func constraint() -> NSLayoutConstraint {
     return NSLayoutConstraint(
-      item:       leftView,
+      item:       leftItem,
       attribute:  leftAttribute,
       relatedBy:  relation,
-      toItem:     rightView,
+      toItem:     rightItem,
       attribute:  rightAttribute,
       multiplier: multiplier,
       constant:   constant
@@ -94,9 +94,9 @@ public struct Restraint {
   public func addToView(view: UIView) -> NSLayoutConstraint {
     let constraint = self.constraint()
 
-    view.setTranslatesAutoresizingMaskIntoConstraints(false)
-    leftView.setTranslatesAutoresizingMaskIntoConstraints(false)
-    rightView?.setTranslatesAutoresizingMaskIntoConstraints(false)
+    if let leftView = leftItem as? UIView {
+      leftView.translatesAutoresizingMaskIntoConstraints = false
+    }
 
     view.addConstraint(constraint)
 
@@ -105,10 +105,10 @@ public struct Restraint {
 
   // MARK: Private
 
-  private let leftView:       AnyObject
+  private let leftItem:       AnyObject
   private let leftAttribute:  NSLayoutAttribute
   private let relation:       NSLayoutRelation
-  private let rightView:      AnyObject?
+  private let rightItem:      AnyObject?
   private let rightAttribute: NSLayoutAttribute
   private let multiplier:     CGFloat
   private let constant:       CGFloat

@@ -129,7 +129,7 @@ You can see this in action in [Example/View.swift](Example/Example/View.swift)
 
 ## How It Works
 
-Each `Restraint` simply creates the appropriate `NSLayoutConstraint`, and the call to `addToView` disables `translatesAutoresizingMaskIntoConstraints` on the left and right views in the constraint and adds that constraint to the target view.
+Each `Restraint` simply creates the appropriate `NSLayoutConstraint`, and the call to `addToView` disables `translatesAutoresizingMaskIntoConstraints` on the left view in the constraint and adds that constraint to the target view.
 
 Optionally, you can call `Restraint().constraint()` to get an instance of `NSLayoutConstraint` and add your constraint with `UIView#addConstraint` or `#addConstraints` later. For example:
 
@@ -148,12 +148,19 @@ In this case you'll need to handle disabling `translatesAutoresizingMaskIntoCons
 Add the following to your project's `Cartfile`:
 
 ```swift
-github "puffinsupply/Restraint" >= 0.0.1
+github "puffinsupply/Restraint" >= 1.0
 ```
 
 ### Manual
 
 Simply add [Restraint.swift](Restraint/Restraint.swift) to your project.
+
+
+## Contributors
+
+- [Adam Michela](https://github.com/soopa/)
+- [Michael Bachand](https://github.com/bachand/)
+
 
 ## License
 

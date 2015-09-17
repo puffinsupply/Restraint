@@ -25,12 +25,7 @@ class View: UIView {
     addSubview(topLabel)
     addSubview(bottomLabel)
 
-    var imageViewSize = CGFloat(200)
-
-    // MARK: View Constraints
-
-    Restraint(self, .Width,  .Equal, UIScreen.mainScreen().applicationFrame.width).addToView(self)
-    Restraint(self, .Height, .Equal, UIScreen.mainScreen().applicationFrame.height).addToView(self)
+    let imageViewSize = CGFloat(200)
 
     // MARK: Image View Constraints
 
@@ -47,8 +42,13 @@ class View: UIView {
 
     // MARK: Bottom Label Constraints
 
-    Restraint(bottomLabel, .Left,  .Equal, self, .LeftMargin).addToView(self)
-    Restraint(bottomLabel, .Right, .Equal, self, .RightMargin).addToView(self)
+    if #available(iOS 9.0, *) {
+      Restraint(bottomLabel, .Leading,  .Equal, layoutMarginsGuide, .Leading).addToView(self)
+      Restraint(bottomLabel, .Trailing, .Equal, layoutMarginsGuide, .Trailing).addToView(self)
+    } else {
+      Restraint(bottomLabel, .Left,  .Equal, self, .LeftMargin).addToView(self)
+      Restraint(bottomLabel, .Right, .Equal, self, .RightMargin).addToView(self)
+    }
 
     Restraint(bottomLabel, .CenterY, .Equal, self, .CenterY, 1.5, (imageViewSize / 4)).addToView(self)
   }
