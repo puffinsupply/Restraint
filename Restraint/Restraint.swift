@@ -97,11 +97,7 @@ public struct Restraint {
     if let leftView = leftItem as? UIView {
       leftView.translatesAutoresizingMaskIntoConstraints = false
     }
-    if let rightView = rightItem as? UIView {
-      rightView.translatesAutoresizingMaskIntoConstraints = false
-    }
 
-    view.translatesAutoresizingMaskIntoConstraints = false
     view.addConstraint(constraint)
 
     return constraint

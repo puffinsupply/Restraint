@@ -27,11 +27,6 @@ class View: UIView {
 
     let imageViewSize = CGFloat(200)
 
-    // MARK: View Constraints
-
-    Restraint(self, .Width,  .Equal, UIScreen.mainScreen().bounds.width).addToView(self)
-    Restraint(self, .Height, .Equal, UIScreen.mainScreen().bounds.height).addToView(self)
-
     // MARK: Image View Constraints
 
     Restraint(imageView, .Width,  .Equal, imageViewSize).addToView(self)
