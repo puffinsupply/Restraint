@@ -11,20 +11,12 @@
 		6CA338431AF163B70069D550 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA338421AF163B70069D550 /* ViewController.swift */; };
 		6CA338481AF163B70069D550 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CA338471AF163B70069D550 /* Images.xcassets */; };
 		6CA3384B1AF163B70069D550 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CA338491AF163B70069D550 /* LaunchScreen.xib */; };
-		6CA338571AF163B70069D550 /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA338561AF163B70069D550 /* ExampleTests.swift */; };
 		6CA3386A1AF16C550069D550 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA338691AF16C550069D550 /* View.swift */; };
 		6CA338701AF16F370069D550 /* Restraint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA338661AF164E50069D550 /* Restraint.framework */; };
 		6CA338711AF16F370069D550 /* Restraint.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA338661AF164E50069D550 /* Restraint.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6CA338511AF163B70069D550 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6CA338331AF163B70069D550 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6CA3383A1AF163B70069D550;
-			remoteInfo = Example;
-		};
 		6CA338651AF164E50069D550 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6CA338601AF164E50069D550 /* Restraint.xcodeproj */;
@@ -63,15 +55,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6CA3383B1AF163B70069D550 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CA3383B1AF163B70069D550 /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CA3383F1AF163B70069D550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CA338401AF163B70069D550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CA338421AF163B70069D550 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6CA338471AF163B70069D550 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6CA3384A1AF163B70069D550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		6CA338501AF163B70069D550 /* ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6CA338551AF163B70069D550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6CA338561AF163B70069D550 /* ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTests.swift; sourceTree = "<group>"; };
 		6CA338601AF164E50069D550 /* Restraint.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Restraint.xcodeproj; path = ../Restraint.xcodeproj; sourceTree = "<group>"; };
 		6CA338691AF16C550069D550 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,13 +74,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6CA3384D1AF163B70069D550 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -100,7 +82,6 @@
 			children = (
 				6CA338601AF164E50069D550 /* Restraint.xcodeproj */,
 				6CA3383D1AF163B70069D550 /* Example */,
-				6CA338531AF163B70069D550 /* ExampleTests */,
 				6CA3383C1AF163B70069D550 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,8 +89,7 @@
 		6CA3383C1AF163B70069D550 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6CA3383B1AF163B70069D550 /* Example.app */,
-				6CA338501AF163B70069D550 /* ExampleTests.xctest */,
+				6CA3383B1AF163B70069D550 /* iOS Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,28 +115,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		6CA338531AF163B70069D550 /* ExampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				6CA338561AF163B70069D550 /* ExampleTests.swift */,
-				6CA338541AF163B70069D550 /* Supporting Files */,
-			);
-			path = ExampleTests;
-			sourceTree = "<group>";
-		};
-		6CA338541AF163B70069D550 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6CA338551AF163B70069D550 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		6CA338611AF164E50069D550 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				6CA338661AF164E50069D550 /* Restraint.framework */,
-				6CA338681AF164E50069D550 /* RestraintTests.xctest */,
+				6CA338681AF164E50069D550 /* Restraint iOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,9 +127,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6CA3383A1AF163B70069D550 /* Example */ = {
+		6CA3383A1AF163B70069D550 /* iOS Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6CA3385A1AF163B70069D550 /* Build configuration list for PBXNativeTarget "Example" */;
+			buildConfigurationList = 6CA3385A1AF163B70069D550 /* Build configuration list for PBXNativeTarget "iOS Example" */;
 			buildPhases = (
 				6CA338371AF163B70069D550 /* Sources */,
 				6CA338381AF163B70069D550 /* Frameworks */,
@@ -178,28 +141,10 @@
 			dependencies = (
 				6CA338731AF16F370069D550 /* PBXTargetDependency */,
 			);
-			name = Example;
+			name = "iOS Example";
 			productName = Example;
-			productReference = 6CA3383B1AF163B70069D550 /* Example.app */;
+			productReference = 6CA3383B1AF163B70069D550 /* iOS Example.app */;
 			productType = "com.apple.product-type.application";
-		};
-		6CA3384F1AF163B70069D550 /* ExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6CA3385D1AF163B70069D550 /* Build configuration list for PBXNativeTarget "ExampleTests" */;
-			buildPhases = (
-				6CA3384C1AF163B70069D550 /* Sources */,
-				6CA3384D1AF163B70069D550 /* Frameworks */,
-				6CA3384E1AF163B70069D550 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6CA338521AF163B70069D550 /* PBXTargetDependency */,
-			);
-			name = ExampleTests;
-			productName = ExampleTests;
-			productReference = 6CA338501AF163B70069D550 /* ExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -215,13 +160,9 @@
 					6CA3383A1AF163B70069D550 = {
 						CreatedOnToolsVersion = 6.3;
 					};
-					6CA3384F1AF163B70069D550 = {
-						CreatedOnToolsVersion = 6.3;
-						TestTargetID = 6CA3383A1AF163B70069D550;
-					};
 				};
 			};
-			buildConfigurationList = 6CA338361AF163B70069D550 /* Build configuration list for PBXProject "Example" */;
+			buildConfigurationList = 6CA338361AF163B70069D550 /* Build configuration list for PBXProject "iOS Example" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -240,8 +181,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				6CA3383A1AF163B70069D550 /* Example */,
-				6CA3384F1AF163B70069D550 /* ExampleTests */,
+				6CA3383A1AF163B70069D550 /* iOS Example */,
 			);
 		};
 /* End PBXProject section */
@@ -254,10 +194,10 @@
 			remoteRef = 6CA338651AF164E50069D550 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6CA338681AF164E50069D550 /* RestraintTests.xctest */ = {
+		6CA338681AF164E50069D550 /* Restraint iOS Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = RestraintTests.xctest;
+			path = "Restraint iOS Tests.xctest";
 			remoteRef = 6CA338671AF164E50069D550 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -270,13 +210,6 @@
 			files = (
 				6CA3384B1AF163B70069D550 /* LaunchScreen.xib in Resources */,
 				6CA338481AF163B70069D550 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6CA3384E1AF163B70069D550 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,22 +226,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6CA3384C1AF163B70069D550 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6CA338571AF163B70069D550 /* ExampleTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6CA338521AF163B70069D550 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6CA3383A1AF163B70069D550 /* Example */;
-			targetProxy = 6CA338511AF163B70069D550 /* PBXContainerItemProxy */;
-		};
 		6CA338731AF16F370069D550 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Restraint;
@@ -417,7 +337,7 @@
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "supply.puffin.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "iOS Example";
 			};
 			name = Debug;
 		};
@@ -428,50 +348,14 @@
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "supply.puffin.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		6CA3385E1AF163B70069D550 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "supply.puffin.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
-			};
-			name = Debug;
-		};
-		6CA3385F1AF163B70069D550 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "supply.puffin.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
+				PRODUCT_NAME = "iOS Example";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6CA338361AF163B70069D550 /* Build configuration list for PBXProject "Example" */ = {
+		6CA338361AF163B70069D550 /* Build configuration list for PBXProject "iOS Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6CA338581AF163B70069D550 /* Debug */,
@@ -480,20 +364,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6CA3385A1AF163B70069D550 /* Build configuration list for PBXNativeTarget "Example" */ = {
+		6CA3385A1AF163B70069D550 /* Build configuration list for PBXNativeTarget "iOS Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6CA3385B1AF163B70069D550 /* Debug */,
 				6CA3385C1AF163B70069D550 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6CA3385D1AF163B70069D550 /* Build configuration list for PBXNativeTarget "ExampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6CA3385E1AF163B70069D550 /* Debug */,
-				6CA3385F1AF163B70069D550 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

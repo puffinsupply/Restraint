@@ -27,7 +27,7 @@
 		6CA338141AF163170069D550 /* Restraint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Restraint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CA338181AF163170069D550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CA338191AF163170069D550 /* Restraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Restraint.h; sourceTree = "<group>"; };
-		6CA3381F1AF163170069D550 /* RestraintTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestraintTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CA3381F1AF163170069D550 /* Restraint iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Restraint iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CA338251AF163170069D550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CA338261AF163170069D550 /* RestraintTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestraintTests.swift; sourceTree = "<group>"; };
 		6CA338301AF1635F0069D550 /* Restraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restraint.swift; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				6CA338141AF163170069D550 /* Restraint.framework */,
-				6CA3381F1AF163170069D550 /* RestraintTests.xctest */,
+				6CA3381F1AF163170069D550 /* Restraint iOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,9 +119,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		6CA338131AF163170069D550 /* Restraint */ = {
+		6CA338131AF163170069D550 /* Restraint iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6CA3382A1AF163170069D550 /* Build configuration list for PBXNativeTarget "Restraint" */;
+			buildConfigurationList = 6CA3382A1AF163170069D550 /* Build configuration list for PBXNativeTarget "Restraint iOS" */;
 			buildPhases = (
 				6CA3380F1AF163170069D550 /* Sources */,
 				6CA338101AF163170069D550 /* Frameworks */,
@@ -132,14 +132,14 @@
 			);
 			dependencies = (
 			);
-			name = Restraint;
+			name = "Restraint iOS";
 			productName = Restraint;
 			productReference = 6CA338141AF163170069D550 /* Restraint.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		6CA3381E1AF163170069D550 /* RestraintTests */ = {
+		6CA3381E1AF163170069D550 /* Restraint iOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6CA3382D1AF163170069D550 /* Build configuration list for PBXNativeTarget "RestraintTests" */;
+			buildConfigurationList = 6CA3382D1AF163170069D550 /* Build configuration list for PBXNativeTarget "Restraint iOS Tests" */;
 			buildPhases = (
 				6CA3381B1AF163170069D550 /* Sources */,
 				6CA3381C1AF163170069D550 /* Frameworks */,
@@ -150,9 +150,9 @@
 			dependencies = (
 				6CA338221AF163170069D550 /* PBXTargetDependency */,
 			);
-			name = RestraintTests;
+			name = "Restraint iOS Tests";
 			productName = RestraintTests;
-			productReference = 6CA3381F1AF163170069D550 /* RestraintTests.xctest */;
+			productReference = 6CA3381F1AF163170069D550 /* Restraint iOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -162,7 +162,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 0700;
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Puffin Supply";
 				TargetAttributes = {
 					6CA338131AF163170069D550 = {
@@ -185,8 +185,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6CA338131AF163170069D550 /* Restraint */,
-				6CA3381E1AF163170069D550 /* RestraintTests */,
+				6CA338131AF163170069D550 /* Restraint iOS */,
+				6CA3381E1AF163170069D550 /* Restraint iOS Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -230,7 +230,7 @@
 /* Begin PBXTargetDependency section */
 		6CA338221AF163170069D550 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6CA338131AF163170069D550 /* Restraint */;
+			target = 6CA338131AF163170069D550 /* Restraint iOS */;
 			targetProxy = 6CA338211AF163170069D550 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -258,6 +258,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -336,7 +337,8 @@
 				INFOPLIST_FILE = Restraint/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "supply.puffin.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = Restraint;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -353,7 +355,8 @@
 				INFOPLIST_FILE = Restraint/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "supply.puffin.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = Restraint;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -371,6 +374,7 @@
 				);
 				INFOPLIST_FILE = RestraintTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "supply.puffin.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -384,6 +388,7 @@
 				);
 				INFOPLIST_FILE = RestraintTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "supply.puffin.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -400,7 +405,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6CA3382A1AF163170069D550 /* Build configuration list for PBXNativeTarget "Restraint" */ = {
+		6CA3382A1AF163170069D550 /* Build configuration list for PBXNativeTarget "Restraint iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6CA3382B1AF163170069D550 /* Debug */,
@@ -409,7 +414,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6CA3382D1AF163170069D550 /* Build configuration list for PBXNativeTarget "RestraintTests" */ = {
+		6CA3382D1AF163170069D550 /* Build configuration list for PBXNativeTarget "Restraint iOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6CA3382E1AF163170069D550 /* Debug */,
