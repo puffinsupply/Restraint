@@ -7,19 +7,19 @@ class View: UIView {
   // MARK: Initializers
 
   init() {
-    super.init(frame: CGRectMake(0, 0, 0, 0))
+    super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
 
     backgroundColor  = UIColor(hue:0.39, saturation:0.8, brightness:1, alpha:1)
 
     topLabel.text  = "Restraint"
-    topLabel.font  = UIFont.boldSystemFontOfSize(32.0)
+    topLabel.font  = UIFont.boldSystemFont(ofSize: 32.0)
     topLabel.alpha = 0.25
 
     bottomLabel.text          = "Restraint is a tiny Swift framework provided as part of the Puffin Supply Project."
     bottomLabel.alpha         = 0.25
     bottomLabel.numberOfLines = 0
-    bottomLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
-    bottomLabel.textAlignment = NSTextAlignment.Center
+    bottomLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
+    bottomLabel.textAlignment = NSTextAlignment.center
 
     addSubview(imageView)
     addSubview(topLabel)
@@ -29,28 +29,28 @@ class View: UIView {
 
     // MARK: Image View Constraints
 
-    Restraint(imageView, .Width,  .Equal, imageViewSize).addToView(self)
-    Restraint(imageView, .Height, .Equal, imageViewSize).addToView(self)
+    Restraint(imageView, .width,  .equal, imageViewSize).addToView(self)
+    Restraint(imageView, .height, .equal, imageViewSize).addToView(self)
 
-    Restraint(imageView, .CenterX, .Equal, self, .CenterX).addToView(self)
-    Restraint(imageView, .CenterY, .Equal, self, .CenterY).addToView(self)
+    Restraint(imageView, .centerX, .equal, self, .centerX).addToView(self)
+    Restraint(imageView, .centerY, .equal, self, .centerY).addToView(self)
 
     // MARK: Top Label Constraints
 
-    Restraint(topLabel, .CenterX, .Equal, imageView, .CenterX).addToView(self)
-    Restraint(topLabel, .CenterY, .Equal, imageView, .Top, 0.5, 0).addToView(self)
+    Restraint(topLabel, .centerX, .equal, imageView, .centerX).addToView(self)
+    Restraint(topLabel, .centerY, .equal, imageView, .top, 0.5, 0).addToView(self)
 
     // MARK: Bottom Label Constraints
 
     if #available(iOS 9.0, *) {
-      Restraint(bottomLabel, .Leading,  .Equal, layoutMarginsGuide, .Leading).addToView(self)
-      Restraint(bottomLabel, .Trailing, .Equal, layoutMarginsGuide, .Trailing).addToView(self)
+      Restraint(bottomLabel, .leading,  .equal, layoutMarginsGuide, .leading).addToView(self)
+      Restraint(bottomLabel, .trailing, .equal, layoutMarginsGuide, .trailing).addToView(self)
     } else {
-      Restraint(bottomLabel, .Left,  .Equal, self, .LeftMargin).addToView(self)
-      Restraint(bottomLabel, .Right, .Equal, self, .RightMargin).addToView(self)
+      Restraint(bottomLabel, .left,  .equal, self, .leftMargin).addToView(self)
+      Restraint(bottomLabel, .right, .equal, self, .rightMargin).addToView(self)
     }
 
-    Restraint(bottomLabel, .CenterY, .Equal, self, .CenterY, 1.5, (imageViewSize / 4)).addToView(self)
+    Restraint(bottomLabel, .centerY, .equal, self, .centerY, 1.5, (imageViewSize / 4)).addToView(self)
   }
 
   required init(coder aDecoder: NSCoder) {
