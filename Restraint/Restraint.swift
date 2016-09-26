@@ -72,7 +72,7 @@ public struct Restraint {
       self.leftAttribute  = leftAttribute
       self.relation       = relation
       self.rightItem      = nil
-      self.rightAttribute = .NotAnAttribute
+      self.rightAttribute = .notAnAttribute
       self.multiplier     = 1
       self.constant       = constant
   }
@@ -91,7 +91,7 @@ public struct Restraint {
     )
   }
 
-  public func addToView(view: UIView) -> NSLayoutConstraint {
+  public func addToView(_ view: UIView) -> NSLayoutConstraint {
     let constraint = self.constraint()
 
     if let leftView = leftItem as? UIView {
