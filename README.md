@@ -160,6 +160,7 @@ Simply add [Restraint.swift](Restraint/Restraint.swift) to your project.
 
 - [Adam Michela](https://github.com/soopa/)
 - [Michael Bachand](https://github.com/bachand/)
+- [Drew Yeaton](https://github.com/drewyeaton/)
 
 
 ## License
