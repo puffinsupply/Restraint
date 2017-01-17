@@ -91,7 +91,7 @@ public struct Restraint {
     )
   }
 
-  public func addToView(_ view: UIView) -> NSLayoutConstraint {
+  @discardableResult public func addToView(_ view: UIView) -> NSLayoutConstraint {
     let constraint = self.constraint()
 
     if let leftView = leftItem as? UIView {
