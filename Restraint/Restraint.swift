@@ -30,10 +30,10 @@ public struct Restraint {
 
   public init(
     _ leftItem:       AnyObject,
-    _ leftAttribute:  NSLayoutAttribute,
-    _ relation:       NSLayoutRelation,
+    _ leftAttribute:  NSLayoutConstraint.Attribute,
+    _ relation:       NSLayoutConstraint.Relation,
     _ rightItem:      AnyObject,
-    _ rightAttribute: NSLayoutAttribute,
+    _ rightAttribute: NSLayoutConstraint.Attribute,
     _ multiplier:     CGFloat,
     _ constant:       CGFloat
     ) {
@@ -48,10 +48,10 @@ public struct Restraint {
 
   public init(
     _ leftItem:       AnyObject,
-    _ leftAttribute:  NSLayoutAttribute,
-    _ relation:       NSLayoutRelation,
+    _ leftAttribute:  NSLayoutConstraint.Attribute,
+    _ relation:       NSLayoutConstraint.Relation,
     _ rightItem:      AnyObject,
-    _ rightAttribute: NSLayoutAttribute
+    _ rightAttribute: NSLayoutConstraint.Attribute
     ) {
       self.leftItem       = leftItem
       self.leftAttribute  = leftAttribute
@@ -64,8 +64,8 @@ public struct Restraint {
 
   public init(
     _ leftItem:       AnyObject,
-    _ leftAttribute:  NSLayoutAttribute,
-    _ relation:       NSLayoutRelation,
+    _ leftAttribute:  NSLayoutConstraint.Attribute,
+    _ relation:       NSLayoutConstraint.Relation,
     _ constant:       CGFloat
     ) {
       self.leftItem       = leftItem
@@ -106,10 +106,10 @@ public struct Restraint {
   // MARK: Private
 
   private let leftItem:       AnyObject
-  private let leftAttribute:  NSLayoutAttribute
-  private let relation:       NSLayoutRelation
+    private let leftAttribute:  NSLayoutConstraint.Attribute
+    private let relation:       NSLayoutConstraint.Relation
   private let rightItem:      AnyObject?
-  private let rightAttribute: NSLayoutAttribute
+    private let rightAttribute: NSLayoutConstraint.Attribute
   private let multiplier:     CGFloat
   private let constant:       CGFloat
   
